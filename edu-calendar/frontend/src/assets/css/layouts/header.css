@@ -1,13 +1,28 @@
-header {
-    background-color: #fff;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 20px;
+/* Existing header styles (if any) would go here.
+   For now, we'll just add the navbar styles. */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    /* Center the navigation links */
+    align-items: center;
+    background-color: #e0e0e0;
+    /* Light grey background for the navbar */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header nav a {
-    margin-right: 15px;
+.nav-link {
+    color: #333;
+    /* Dark grey text color */
     text-decoration: none;
-    color: #007bff;
+    margin: 0 15px;
+    /* Spacing between links */
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff;
+    /* Blue color on hover */
 }

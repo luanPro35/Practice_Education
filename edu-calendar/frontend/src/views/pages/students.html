@@ -1,6 +1,18 @@
 <div class="container">
   <h1>Students</h1>
-  <div class="card-container" id="students-container">
-    <!-- Student cards will be inserted here by JavaScript -->
+  <button id="add-student">+ Add Student</button>
+  <div class="card-container" id="students-container"></div>
+  <div class="modal" id="student-modal" style="display: none">
+    <div class="modal-content">
+      <h2 id="modal-title">Add Student</h2>
+      <form id="student-form">
+        <input type="text" id="student-name" placeholder="Name" required />
+        <input type="email" id="student-email" placeholder="Email" required />
+        <input type="text" id="student-phone" placeholder="Phone" required />
+        <input type="text" id="student-class" placeholder="Class" required />
+        <input type="hidden" id="student-id" name="id" />
+        <button type="submit">Save</button>
+      </form>
+    </div>
   </div>
 </div>

@@ -1,6 +1,33 @@
 <div class="container">
   <h1>Courses</h1>
+
+  <!-- Nút thêm khóa học -->
+  <button id="add-course-btn">+ Add Course</button>
+
+  <!-- Danh sách khóa học -->
   <div class="card-container" id="courses-container">
-    <!-- Course cards will be inserted here by JavaScript -->
+    <!-- JS sẽ render danh sách course ở đây -->
+  </div>
+
+  <!-- Modal thêm/sửa khóa học -->
+  <div class="modal" id="course-modal" style="display: none">
+    <div class="modal-content">
+      <h2 id="course-modal-title">Add Course</h2>
+      <form id="course-form">
+        <input
+          type="text"
+          id="course-title"
+          placeholder="Course Title"
+          required
+        />
+        <textarea id="course-description" placeholder="Description"></textarea>
+        <input type="text" id="course-teacher" placeholder="Teacher" required />
+        <input type="text" id="course-room" placeholder="Room" required />
+        <input type="date" id="course-start-date" required />
+        <input type="date" id="course-end-date" required />
+        <input type="hidden" id="course-id" name="id" />
+        <button type="submit">Save</button>
+      </form>
+    </div>
   </div>
 </div>
