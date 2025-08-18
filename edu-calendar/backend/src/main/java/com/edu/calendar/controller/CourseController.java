@@ -29,6 +29,11 @@ public class CourseController {
         return courseService.createCourse(course);
     }
 
+    @PutMapping("/{id}")
+    public Course updateCourse(@PathVariable Long id, @RequestBody Course course) {
+        return courseService.updateCourse(id, course);
+    }
+
     @DeleteMapping("/{id}")
     public void deleteCourse(@PathVariable Long id) {
         courseService.deleteCourse(id);

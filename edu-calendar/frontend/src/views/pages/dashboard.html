@@ -1,37 +1,80 @@
-<div class="container">
-  <h1>Dashboard</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Academia</title>
+    <link rel="stylesheet" href="../../assets/css/layouts/header.css" />
+    <link rel="stylesheet" href="../../assets/css/layouts/footer.css" />
+    <link rel="stylesheet" href="../../assets/css/pages/dashboard.css" />
+    <!-- Assuming Font Awesome is linked in the main layout or index.html -->
+  </head>
+  <body>
+    <header id="page-header"></header>
 
-  <!-- Cards tổng quan -->
-  <div class="stats">
-    <div class="stat-card-courses">📚 Courses: 5</div>
-    <div class="stat-card-students">👨‍🎓 Students: 120</div>
-    <div class="stat-card-teachers">👩‍🏫 Teachers: 10</div>
-    <div class="stat-card-classes">🗓️ Classes this week: 8</div>
-  </div>
+    <main>
+      <section class="dashboard-banner">
+        <h1>Dashboard</h1>
+        <p>Welcome to your dashboard.</p>
+      </section>
 
-  <!-- Lịch học sắp tới -->
-  <div class="upcoming">
-    <h2>Upcoming Schedule</h2>
-    <ul>
-      <li>9:00 AM - Web Development (Room 101)</li>
-      <li>1:30 PM - Java Programming (Room 202)</li>
-    </ul>
-  </div>
+      <section class="dashboard-controls">
+        <div class="add-container">
+          <button id="add-btn" class="btn btn-primary">Create New</button>
+        </div>
+      </section>
 
-  <!-- Thông báo -->
-  <div class="announcements">
-    <h2>Announcements</h2>
-    <ul>
-      <li>[Notice] Exam schedule for Web Dev released</li>
-      <li>[Update] Room changed for Java Programming</li>
-    </ul>
-  </div>
+      <section class="dashboard-stats">
+        <div class="stat-card">
+          <h4>Total Courses</h4>
+          <p>15</p>
+        </div>
+        <div class="stat-card">
+          <h4>Total Students</h4>
+          <p>250</p>
+        </div>
+        <div class="stat-card">
+          <h4>Courses Completed</h4>
+          <p>✅ 10</p>
+        </div>
+        <div class="stat-card">
+          <h4>Pending Tests</h4>
+          <p>📘 3</p>
+        </div>
+      </section>
 
-  <!-- Truy cập nhanh -->
-  <div class="quick-actions">
-    <h2>Quick Actions</h2>
-    <button onclick="goTo('students')">+ Add Student</button>
-    <button onclick="goTo('courses')">+ Add Course</button>
-    <button onclick="goTo('schedule')">📅 View Calendar</button>
-  </div>
-</div>
+      <section class="dashboard-main">
+        <div class="dashboard-chart">
+          <h3>Learning Progress</h3>
+          <div class="chart-container">
+            <!-- JS will render the chart here -->
+            <p>75%</p>
+          </div>
+        </div>
+        <div class="dashboard-lists">
+          <div class="dashboard-list">
+            <h3>Recently Accessed Courses</h3>
+            <ul>
+              <li><a href="#">Introduction to Web Development</a></li>
+              <li><a href="#">Advanced JavaScript</a></li>
+              <li><a href="#">React for Beginners</a></li>
+            </ul>
+          </div>
+          <div class="dashboard-list">
+            <h3>Upcoming Tests</h3>
+            <ul>
+              <li><a href="#">Mid-term Exam - Advanced JavaScript</a></li>
+              <li><a href="#">Final Project - React for Beginners</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Edu Calendar</p>
+    </footer>
+
+    <script src="../../main.js"></script>
+  </body>
+</html>

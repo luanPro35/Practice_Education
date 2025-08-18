@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.createElement('canvas');
+    // Add styles to make canvas a background layer
+    canvas.style.position = 'fixed';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.zIndex = '-1';
     document.body.insertBefore(canvas, document.body.firstChild);
     const ctx = canvas.getContext('2d');
 
@@ -63,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
             size: Math.random() * 8 + 4,
-            speed: Math.random() * 2 + 1,
+            speed: Math.random() * 1 + 0.5, // Reduced speed
             color: ['#e57373', '#ffb74d', '#fdd835'][Math.floor(Math.random() * 3)]
         });
     }

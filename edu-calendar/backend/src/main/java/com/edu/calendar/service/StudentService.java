@@ -28,4 +28,16 @@ public class StudentService {
     public void deleteStudent(Long id) {
         studentRepository.deleteById(id);
     }
+
+    public Student updateStudent(Long id, Student studentDetails) {
+        Student existingStudent = studentRepository.findById(id).orElse(null);
+        if (existingStudent != null) {
+            existingStudent.setFirstName(studentDetails.getFirstName());
+            existingStudent.setLastName(studentDetails.getLastName());
+            existingStudent.setEmail(studentDetails.getEmail());
+            existingStudent.setMajor(studentDetails.getMajor()); // Uncommented and added setMajor
+            return studentRepository.save(existingStudent);
+        }
+        return null; // Or throw an exception if student not found
+    }
 }

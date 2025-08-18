@@ -1,0 +1,227 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+section {
+    padding: 40px 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Section: Benefits */
+.image-benefits img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 8px;
+}
+
+.content-benefits {
+    text-align: center;
+}
+
+.content-benefits span {
+    color: #007bff;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.content-benefits h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.card-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card-benefits .card-content {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.card-benefits .card-content h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+    color: #007bff;
+}
+
+.card-benefits .card-content p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Section: Overlay */
+.overlay {
+    background-color: #007bff;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 20px;
+    border-radius: 8px;
+}
+
+.overlay-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    margin: 10px;
+}
+
+.overlay-card i {
+    font-size: 2.5em;
+}
+
+.over-card-content span {
+    display: block;
+}
+
+.over-card-content span:first-child {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.over-card-content span:last-child {
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Section: Courses */
+.courses {
+    text-align: center;
+}
+
+.courses span:first-child {
+    color: #007bff;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.courses span:nth-child(2) {
+    font-size: 2em;
+    color: #333;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.courses-card {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.courses-card-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.courses-card-top i {
+    font-size: 2em;
+    color: #ffc107;
+    /* Star color */
+}
+
+.courses-card-top_content {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.courses-card-top p {
+    color: #ffc107;
+    /* Star color */
+    font-size: 1.1em;
+}
+
+.courses-salary {
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.courses-salary p {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #28a745;
+    /* Green for price */
+}
+
+button#btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content-benefits h2 {
+        font-size: 1.8em;
+    }
+
+    .overlay {
+        flex-direction: column;
+    }
+
+    .overlay-card {
+        margin-bottom: 20px;
+    }
+
+    .courses span:nth-child(2) {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-benefits h2 {
+        font-size: 1.5em;
+    }
+
+    .card-benefits .card-content {
+        min-width: 100%;
+    }
+
+    .courses span:nth-child(2) {
+        font-size: 1.5em;
+    }
+
+    button#btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+function init() {
     const loginForm = document.getElementById('login-form');
 
     if (loginForm) {
@@ -14,4 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Login functionality is not yet implemented.');
         });
     }
-});
+}
+
+export default init;

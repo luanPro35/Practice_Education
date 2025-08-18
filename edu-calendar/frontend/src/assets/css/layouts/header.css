@@ -1,28 +1,146 @@
-/* Existing header styles (if any) would go here.
-   For now, we'll just add the navbar styles. */
-
+/* General Navbar Styling */
 .navbar {
-    display: flex;
-    justify-content: center;
-    /* Center the navigation links */
-    align-items: center;
-    background-color: #e0e0e0;
-    /* Light grey background for the navbar */
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    color: #333;
 }
 
-.nav-link {
+/* Top Bar Styling */
+.navbar .top-wrap {
+    display: flex;
+    justify-content: space-between;
+    /* Align items to the edges */
+    align-items: center;
+    padding: 10px 0;
+    /* Remove side padding */
+    border-bottom: 1px solid #e0e0e0;
+    max-width: 1200px;
+    /* Set a max-width */
+    margin: 0 auto;
+    /* Center the container */
+    padding: 10px 20px;
+    /* Add padding back for content spacing */
+}
+
+.navbar .navbar-brand h3 {
+    margin: 0;
+    font-size: 1.8em;
+    /* Increased size */
+    /* Light green */
+}
+
+.navbar .navbar-brand p {
+    margin: 0;
+    font-size: 0.9em;
+    /* Increased size */
+    color: #6c757d;
+}
+
+.navbar .navbar-time,
+.navbar .navbar-phone {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar-time i,
+.navbar .navbar-phone i {
+    font-size: 1.8em;
+    /* Increased size */
+    margin-right: 15px;
+    /* Increased spacing */
+    color: #4CAF50;
+    /* Light green */
+}
+
+.navbar .navbar-day h3,
+.navbar .navbar-number h3 {
+    margin: 0;
+    font-size: 1.1em;
+    /* Increased size */
+    font-weight: bold;
+}
+
+.navbar .navbar-number h3:last-child {
     color: #333;
-    /* Dark grey text color */
+    /* Changed to dark color for visibility */
+}
+
+.navbar .navbar-social i {
+    margin: 0 8px;
+    font-size: 1.2em;
+    color: #6c757d;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #6c757d;
+    border-radius: 50%;
+    padding: 8px;
+    width: 20px;
+    /* Ensure consistent size */
+    height: 20px;
+    /* Ensure consistent size */
+    text-align: center;
+    line-height: 20px;
+    /* Center icon vertically */
+}
+
+.navbar .navbar-social i:hover {
+    color: #fff;
+    background-color: #4CAF50;
+    /* Light green */
+    border-color: #4CAF50;
+    /* Light green */
+}
+
+/* Main Menu Bar Styling */
+.navbar .navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    /* Align items to the edges */
+    align-items: center;
+    max-width: 1200px;
+    /* Set a max-width */
+    margin: 0 auto;
+    /* Center the container */
+    padding: 15px 20px;
+    /* Add padding for content spacing */
+}
+
+.navbar .navbar-menu .navbar-brand ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar .navbar-menu .navbar-brand li {
+    margin-right: 25px;
+}
+
+.navbar .navbar-menu .navbar-brand a {
     text-decoration: none;
-    margin: 0 15px;
-    /* Spacing between links */
+    color: white;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-.nav-link:hover {
-    color: #007bff;
-    /* Blue color on hover */
+.navbar .navbar-menu .navbar-brand a:hover {
+    color: #4CAF50;
+    /* Light green */
+}
+
+.navbar .btn-get-certificate {
+    background-color: #4CAF50;
+    /* Light green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .btn-get-certificate:hover {
+    background-color: #45a049;
+    /* Darker green */
 }

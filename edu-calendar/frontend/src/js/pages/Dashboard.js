@@ -1,4 +1,4 @@
-import { fetchDashboardData } from '../services/api.js'; // Giả định hàm này tồn tại
+import { fetchDashboardData } from '../services/api.js';
 
 // Function to render dashboard data
 async function renderDashboard() {
@@ -63,3 +63,6 @@ function goTo(page) {
 
 // Call renderDashboard when the page loads
 renderDashboard();
+
+// Export the function for use in routing
+export default renderDashboard;

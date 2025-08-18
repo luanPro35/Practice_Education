@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
+// Register initialization function
+function initRegister() {
     const registerForm = document.getElementById('register-form');
 
     if (registerForm) {
@@ -20,4 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Registration functionality is not yet implemented.');
         });
     }
-});
+}
+
+// Call the function when the page loads
+document.addEventListener('DOMContentLoaded', initRegister);
+
+// Export the function for use in routing
+export default initRegister;

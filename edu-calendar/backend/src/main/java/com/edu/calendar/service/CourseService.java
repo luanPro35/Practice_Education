@@ -28,4 +28,18 @@ public class CourseService {
     public void deleteCourse(Long id) {
         courseRepository.deleteById(id);
     }
+
+    public Course updateCourse(Long id, Course courseDetails) {
+        Course existingCourse = courseRepository.findById(id).orElse(null);
+        if (existingCourse != null) {
+            existingCourse.setName(courseDetails.getName());
+            existingCourse.setDescription(courseDetails.getDescription());
+            existingCourse.setTeacher(courseDetails.getTeacher());
+            existingCourse.setRoom(courseDetails.getRoom());
+            existingCourse.setStartDate(courseDetails.getStartDate());
+            existingCourse.setEndDate(courseDetails.getEndDate());
+            return courseRepository.save(existingCourse);
+        }
+        return null; // Or throw an exception if course not found
+    }
 }

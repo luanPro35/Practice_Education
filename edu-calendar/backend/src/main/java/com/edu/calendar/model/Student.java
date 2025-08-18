@@ -14,6 +14,7 @@ public class Student {
     private String firstName;
     private String lastName;
     private String email;
+    private String major; // Added major field
 
     // Getters and Setters
     public Long getId() {
@@ -46,5 +47,13 @@ public class Student {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getMajor() {
+        return major;
+    }
+
+    public void setMajor(String major) {
+        this.major = major;
     }
 }

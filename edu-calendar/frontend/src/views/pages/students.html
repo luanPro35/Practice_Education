@@ -1,18 +1,130 @@
-<div class="container">
-  <h1>Students</h1>
-  <button id="add-student">+ Add Student</button>
-  <div class="card-container" id="students-container"></div>
-  <div class="modal" id="student-modal" style="display: none">
-    <div class="modal-content">
-      <h2 id="modal-title">Add Student</h2>
-      <form id="student-form">
-        <input type="text" id="student-name" placeholder="Name" required />
-        <input type="email" id="student-email" placeholder="Email" required />
-        <input type="text" id="student-phone" placeholder="Phone" required />
-        <input type="text" id="student-class" placeholder="Class" required />
-        <input type="hidden" id="student-id" name="id" />
-        <button type="submit">Save</button>
-      </form>
-    </div>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students - Academia</title>
+    <link rel="stylesheet" href="../../assets/css/layouts/header.css" />
+    <link rel="stylesheet" href="../../assets/css/layouts/footer.css" />
+    <link rel="stylesheet" href="../../assets/css/pages/students.css" />
+    <!-- Assuming Font Awesome is linked in the main layout or index.html -->
+  </head>
+  <body>
+    <header id="page-header"></header>
+
+    <main>
+      <section class="students-banner">
+        <h1>Our Students</h1>
+        <p>Meet our talented and dedicated students.</p>
+      </section>
+
+      <section class="students-controls">
+        <div class="add-student-container">
+          <form id="addStudentForm">
+            <input
+              type="text"
+              id="studentFirstName"
+              placeholder="First Name"
+              required
+            />
+            <input
+              type="text"
+              id="studentLastName"
+              placeholder="Last Name"
+              required
+            />
+            <input
+              type="email"
+              id="studentEmail"
+              placeholder="Student Email"
+              required
+            />
+            <input type="text" id="studentMajor" placeholder="Major" />
+            <button id="add-student-btn" class="btn btn-primary" type="submit">
+              Add Student
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section class="students-list">
+        <!-- Student cards will be dynamically loaded here -->
+        <!-- Example card structure (will be replaced by JS) -->
+        <div class="student-card">
+          <img src="../../assets/images/placeholder.jpg" alt="Student Image" />
+          <div class="student-info">
+            <h3>John Doe</h3>
+            <p>john.doe@example.com</p>
+            <p>Major: Computer Science</p>
+            <a href="#" class="profile-link" data-student-id="1"
+              >View Profile</a
+            >
+            <button class="delete-student-btn" data-student-id="1">
+              Delete
+            </button>
+            <button class="update-student-btn" data-student-id="1">
+              Update
+            </button>
+          </div>
+        </div>
+        <div class="student-card">
+          <img src="../../assets/images/placeholder.jpg" alt="Student Image" />
+          <div class="student-info">
+            <h3>Jane Smith</h3>
+            <p>jane.smith@example.com</p>
+            <p>Major: Physics</p>
+            <a href="#" class="profile-link" data-student-id="2"
+              >View Profile</a
+            >
+            <button class="delete-student-btn" data-student-id="2">
+              Delete
+            </button>
+            <button class="update-student-btn" data-student-id="2">
+              Update
+            </button>
+          </div>
+        </div>
+        <div class="student-card">
+          <img src="../../assets/images/placeholder.jpg" alt="Student Image" />
+          <div class="student-info">
+            <h3>Peter Jones</h3>
+            <p>peter.jones@example.com</p>
+            <p>Major: History</p>
+            <a href="#" class="profile-link" data-student-id="3"
+              >View Profile</a
+            >
+            <button class="delete-student-btn" data-student-id="3">
+              Delete
+            </button>
+            <button class="update-student-btn" data-student-id="3">
+              Update
+            </button>
+          </div>
+        </div>
+        <div class="student-card">
+          <img src="../../assets/images/placeholder.jpg" alt="Student Image" />
+          <div class="student-info">
+            <h3>Mary Johnson</h3>
+            <p>mary.johnson@example.com</p>
+            <p>Major: Literature</p>
+            <a href="#" class="profile-link" data-student-id="4"
+              >View Profile</a
+            >
+            <button class="delete-student-btn" data-student-id="4">
+              Delete
+            </button>
+            <button class="update-student-btn" data-student-id="4">
+              Update
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Edu Calendar</p>
+    </footer>
+
+    <script type="module" src="../../js/pages/Students.js"></script>
+  </body>
+</html>

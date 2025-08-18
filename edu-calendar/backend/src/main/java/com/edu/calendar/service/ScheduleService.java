@@ -25,6 +25,19 @@ public class ScheduleService {
         return scheduleRepository.save(schedule);
     }
 
+    public Schedule updateSchedule(Long id, Schedule schedule) {
+        Schedule existingSchedule = scheduleRepository.findById(id).orElse(null);
+        if (existingSchedule != null) {
+            existingSchedule.setTitle(schedule.getTitle());
+            existingSchedule.setDate(schedule.getDate());
+            existingSchedule.setTime(schedule.getTime());
+            existingSchedule.setCourse(schedule.getCourse());
+            existingSchedule.setStudent(schedule.getStudent());
+            return scheduleRepository.save(existingSchedule);
+        }
+        return null;
+    }
+
     public void deleteSchedule(Long id) {
         scheduleRepository.deleteById(id);
     }
